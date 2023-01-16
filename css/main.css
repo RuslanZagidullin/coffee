@@ -1,0 +1,488 @@
+@import 'nullstyle';
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Montserrat+Alternates:wght@500;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300&family=Poppins:wght@400;500;600;700;900&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Montserrat+Alternates:wght@500;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300&family=Poppins:wght@400;500;600;700;900&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Montserrat+Alternates:wght@500;900&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300&family=Poppins:wght@400;500;600;700;900&family=Roboto:wght@300;400&display=swap');
+
+:root {
+    width: 1400px;
+    margin: 0 auto;       
+}
+
+html {
+    font-size: 16px;
+}
+
+@function rem($px) {
+    $result: $px / 16 + rem;
+    @return $result;
+}
+
+$color_1:#415167;
+
+%font_1 {
+    font-family: 'Montserrat';
+    font-style: normal;   
+    font-weight: 900; 
+    font-size: rem(54);    
+    line-height: rem(70);  
+}
+
+%font_2 {
+    font-family: 'Nunito';
+    font-style: normal;   
+    font-weight: 300; 
+    font-size: rem(16);    
+    line-height: rem(24);  
+}
+
+h1 {
+    @extend  %font_1;  
+    color: $color_1;
+    text-transform: uppercase;
+    padding-top: rem(504);
+    padding-left: rem(195);
+}
+
+h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: rem(30);
+    line-height: rem(34);
+    color: $color_1;
+}
+
+h3 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(20);
+    line-height: rem(24);
+    color: $color_1;
+}
+
+h4 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: rem(28);
+    color: #232C38;
+}
+
+p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: rem(16);
+    line-height: rem(22);
+    color: #151D28;
+}
+
+
+.site {
+    z-index: -2;
+    background: #F9FBFF;
+}
+
+/* headerer */
+
+.header {    
+    height: rem(760);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(72);
+    padding-left: rem(187);
+    width: rem(1320);     
+    a {
+        z-index: 3;       
+    }   
+}
+
+.header__row {
+    display: flex;
+    margin-top: rem(- 72 - 45);    
+}
+
+.header__col { 
+    z-index: 2; 
+    span {
+        color: white;
+        background: #C7A17A;
+        width: rem(486);
+        height: rem(70);
+    }            
+}
+
+.header__video {
+    img {         
+        width: rem(757) - (rem(408) - rem(337)) / 2;
+        height: rem(947) - rem(67) - rem(112);
+    }
+
+}
+.play {
+    img {          
+        margin-top: rem(-497);
+        margin-left: rem(767);         
+    }
+}
+
+.video_image {
+    margin-left: rem(-200);
+}
+
+.menu {
+    width: rem(362);
+    height: rem(768);
+    display: flex;   
+    flex-direction: column;
+    background-color:#415167;
+    justify-content: center;
+    padding-left: rem(57);       
+    .menu__title {
+        @extend %font_2;
+        color: #EDF0F5;
+        font-weight: 700;
+        line-height: rem(22);
+    }
+    .menu__list {     
+        li {
+            margin-top: rem(30);
+            a {
+                @extend %font_2;
+                color: #EDF0F5;                
+            }
+        }        
+    }  
+}
+
+/* featres */
+
+.container-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(87);   
+    h2 {
+        margin-top: rem(9);
+    }
+}
+
+.container-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(72);
+    width: rem(1090);    
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        img {
+            margin-top: rem(17);
+        }
+        h4 {
+            margin-top: rem(25);
+        }
+        p {
+            margin-top: rem(12);
+            text-align: center;
+        }
+    }
+}
+
+/* products */
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: rem(128+95);   
+    height: rem(894);  
+}
+.background_rectangle {
+    width: rem(384);
+    height: rem(894);
+    background: #415167;
+    z-index: 0;
+    margin-top: rem(- 770);
+    align-self: start;
+    
+}
+
+.container-price {     
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    z-index: 1; 
+    margin-top: rem(72);    
+    overflow: hidden;    
+    width: rem(1400 - 130); 
+    margin-left: rem(130); 
+
+}
+
+.first_row,
+.second_row {
+    display: flex;  
+    justify-content: space-between;        
+    overflow: hidden;    
+}
+
+.card {
+    display: flex;
+    min-width: rem(559);
+    height: rem(256);
+    background: white;
+    box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);   
+    margin-right: rem(30);
+    margin-bottom: rem(30);
+    span {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(20);
+        line-height: rem(24);        
+        color: #C7A17A;
+        margin-top: rem(35);
+    }
+    .price {
+        display: flex;
+        flex-direction: column;
+        margin-left: rem(45);
+    }
+    img {
+        background: #EDF0F5;
+    }
+    h4 {
+        margin-top: rem(8);
+    }
+    p {
+        margin-top: rem(24);
+    }
+}
+
+.button {
+    display: flex;
+    margin-top: rem(40);        
+    align-items: center;  
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: rem(22);     
+    .active {
+        width: rem(134);
+        height: rem(32);
+        background: #C7A17A;
+        border-radius: rem(19);            
+        display: flex;
+        align-items: center; 
+        text-align: center; 
+        justify-content: center;
+        margin-right: rem(20);
+        color: #F9FBFF;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    a {
+        color: #415167;
+    }
+}
+
+.price {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(20);
+    line-height: rem(24);        
+    color: #C7A17A;
+}
+
+.card.hidden {
+    opacity: 0.3;
+}
+
+.arrow a img{
+    z-index: 5;
+    margin-left: rem(1115);   
+    margin-top: rem(-340);      
+}
+
+/* giftset */
+
+.giftset, .combo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: start;
+    height: rem(802);   
+    h2 {
+        margin-top: rem(6);
+        z-index: 2;
+    }
+    h3 {
+        z-index: 2;
+    }
+}
+
+.first-giftset {
+    display: flex;
+    align-self: start;
+    margin-top: rem(66); 
+    .revo {
+        z-index: 2;
+        width: rem(463);
+        height: rem(416);
+        margin-top: rem(51);
+        margin-left: rem(130);
+    }
+    .description {
+        margin-left: rem(-205);
+        background-color: white;
+        box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.05);
+        z-index: 1;        
+        height: rem(460);
+        padding-left: rem(398);
+        padding-top: rem(60);
+        border: solid 1px rgba(218, 218, 218, 0.1);
+        .passive {
+            margin-left: rem(120);
+        }
+    }
+}
+
+.location {
+    display: flex;
+    margin-top: rem(24);
+    img {
+        margin-right: rem(12);
+    }
+    p {
+        margin-right: rem(70);
+    }   
+}
+
+.numeration {   
+    .number {
+        width: rem(88);
+        height: rem(154);       
+        position: relative;
+        background: #EDF0F5 ;
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 900;
+            font-size: rem(30);
+            line-height: rem(34);
+            color: #415167;            
+            position: absolute;          
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);   
+            opacity: 0.3;              
+        }
+    }   
+    .number.active {
+        background: white;
+        z-index: 2;
+        p {
+            opacity: 1;
+        }
+    }
+}
+
+.background_giftset {
+    width: rem(1076);
+    height: rem(802);
+    background: #EDF0F5;
+    z-index: 0;
+    margin-top: rem(- 650);
+    align-self: start;    
+}
+
+/* combo */
+
+.combo {
+    height: rem(850); 
+}
+
+.combo_row {
+    display: flex;
+    margin-left: rem(128);    
+    align-self: start;
+    width: rem(1400-128);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.first-combo, 
+.second-combo,
+.third-combo,
+.fourth-combo {
+    width: rem(360);
+    height: rem(562);   
+    margin: rem(64) rem(30) rem(128) rem(0); 
+    background: white;      
+    .combo_image {
+        background: #EDF0F5;        
+    }
+    .description {
+        margin-left: rem(42);
+        margin-top: rem(42);
+        .sale {
+            display: flex;
+            .old_price {
+                font-family: 'Nunito';
+                font-style: italic;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 19px;
+                text-decoration-line: line-through;            
+                color: #415167; 
+                margin-left: rem(15);
+                margin-top: rem(3);                     
+            }   
+        }             
+    }
+    .active {
+        margin-right: rem(69);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.first-combo {
+    filter: drop-shadow(0px 4px 24px rgba(205, 205, 205, 0.5));
+}
+
+.fourth-combo {
+    opacity: 0.3;
+}
+
+.background_combo {
+    width: rem(324);
+    height: rem(906);
+    background: #415167;
+    z-index: 0;
+    margin-top: rem(- 446);
+    align-self: end;    
+}
+
+.arrow_combo {
+    z-index: 5;
+    margin-left: rem(1150);   
+    margin-top: rem(-490);    
+}
+
+/* footer */
+
+.footer {
+    padding-bottom: rem(20);  
+    padding-top: rem(18);  
+    text-align: center;
+    background: #EDF0F5;
+}
