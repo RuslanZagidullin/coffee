@@ -1,2 +1,2 @@
 # coffee
-website without adaptive layout
+сайт без адаптива
